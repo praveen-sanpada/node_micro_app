@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+
+<body>
+    <script>
+        const socket = io.connect('http://localhost:9003');
+        socket.emit('recognition', {
+            message: "I am Recognition"
+        });
+        socket.on('recognition', function (result) {
+            console.log("recognition", result);
+        });
+    </script>
+
+</html>

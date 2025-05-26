@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+
+<body>
+    <script>
+        const socket = io.connect('http://localhost:9001');
+        socket.emit('admin', {
+            message: "I am Admin"
+        });
+        socket.on('admin', function (result) {
+            console.log("admin", result);
+        });
+    </script>
+
+</html>

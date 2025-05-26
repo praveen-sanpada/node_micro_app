@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+
+<body>
+    <script>
+        const socket = io.connect('http://localhost:9004');
+        socket.emit('detection', {
+            message: "I am Detection"
+        });
+        socket.on('detection', function (result) {
+            console.log("detection", result);
+        });
+    </script>
+
+</html>

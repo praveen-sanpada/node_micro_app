@@ -1,0 +1,11 @@
+.env
+
+docs.txt
+
+node_modules
+
+Admin/node_modules
+User/node_modules
+Recognition/node_modules
+Detection/node_modules
+Reader/node_modules
