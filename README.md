@@ -12,6 +12,7 @@ APP_ENV=development
 APP_URL=http://localhost
 
 =============================================
+
 .gitignore:
 .env
 docs.txt
@@ -21,4 +22,5 @@ User/node_modules
 Recognition/node_modules
 Detection/node_modules
 Reader/node_modules
+
 =============================================
